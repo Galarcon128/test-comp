@@ -6,8 +6,30 @@ export default class Gene {
   constructor(id) {
     this.advancedSearch = `${id}[geneInfo.id]`
     this.query = GENE_INFO
+    this.tipQuery = GENE_TOOLTIP
   }
 }
+
+const GENE_TOOLTIP = gql`
+query getGeneInfo($advancedSearch: String!){
+  getGenesBy(limit:10 page: 0 advancedSearch:$advancedSearch)
+    {
+      data{
+        geneInfo{
+          id
+          name
+          leftEndPosition
+          rightEndPosition
+          strand
+        }
+        products{
+          name
+        }
+      }
+    }
+  
+  }
+`
 
 const GENE_INFO = gql`
 query getGeneInfo($advancedSearch: String!){
