@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import {SearchGene} from '../components/apollo/GeneCollection';
 import { useQuery } from '@apollo/react-hooks';
@@ -6,6 +8,7 @@ import Gene from './tabs/Genes'
 const ResultSearch = ({
     search = "ara"
 }) => {
+
     const [limit] = useState(10)
     const [page] = useState(0)
     let searchGene = new SearchGene(search, limit, page)

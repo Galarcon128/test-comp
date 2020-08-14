@@ -1,7 +1,7 @@
 /**
 # Component (user guide)
 # Component name 
-[GeneDascription --v0.1]
+[GeneDascription --v1.0]
 
 ## Description  
 [is a tooltip]
@@ -87,7 +87,7 @@ __Return:__
 **/
 
 import React, { useState } from "react";
-import ToolTip from "./ui-components/Tooltip";
+import ToolTip from "../toolTip/ToolTip";
 import Style from "./geneDescription.module.css";
 
 const GeneDescription = ({

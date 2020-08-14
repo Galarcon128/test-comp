@@ -71,6 +71,9 @@ query SearchGenes($search: String!){
       geneInfo {
           id
           name
+          leftEndPosition
+          rightEndPosition
+          strand
           synonyms
           note   
         }
